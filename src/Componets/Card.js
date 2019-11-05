@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../modules/button.module.css';
 import './Card.css'
 
 const Card = (props) => {
@@ -12,7 +13,7 @@ const Card = (props) => {
          About:
            {/* {props.children} */}
        </p>
-       <button onClick={props.click}> Delete </button>
+       <button className={styles.normal} onClick={props.click}> Delete </button>
      </div>
   )
 }

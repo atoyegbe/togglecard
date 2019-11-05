@@ -4,6 +4,7 @@ import Card from './Componets/Card'
 
 import "./styles.css";
 import "./Componets/Card.css";
+import styles from './modules/button.module.css';
 
 
 class App extends Component {
@@ -50,7 +51,7 @@ class App extends Component {
   if(this.state.showCard) {
     persons = (
       <div>
-        <button onClick={this.darkMode}> Dark Mode</button>
+        <button className={styles.index} onClick={this.darkMode}> Dark Mode</button>
       {
          this.state.persons.map((person, index) => {
            return <Card 
@@ -63,12 +64,12 @@ class App extends Component {
         }
 
       </div>
-    )
+    ) 
   }
 
     return (
       <div className="App">
-        <button onClick={this.toggleHandler}> Toggle </button>
+        <button className={styles.index} onClick={this.toggleHandler}> Toggle </button>
         { persons}
         
       </div>
