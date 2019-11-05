@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import Card from './Componets/Card'
 
 import "./styles.css";
+import "./Componets/Card.css";
+
 
 class App extends Component {
   state = {
@@ -11,7 +13,8 @@ class App extends Component {
       {id: 'loml', name: "faith", age:"21" }
     ],
 
-    showCard: false
+    showCard: false,
+    classess: 'Card'
   }
 
  
@@ -28,6 +31,15 @@ class App extends Component {
 
   }
 
+  
+  darkMode = () => {
+    let classess = [...this.state.classess];
+    classess = 'black-mode'
+    
+    this.setState({classess: classess})
+
+  }
+
 
   render() {
   // const this.state.persons = ;
@@ -38,10 +50,12 @@ class App extends Component {
   if(this.state.showCard) {
     persons = (
       <div>
+        <button onClick={this.darkMode}> Dark Mode</button>
       {
          this.state.persons.map((person, index) => {
            return <Card 
                     name={person.name} 
+                    className={this.state.classess}
                     age={person.age} 
                     click={() => this.deleteCard(index)}
                     key={person.id} />

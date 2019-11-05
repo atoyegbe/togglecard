@@ -1,9 +1,25 @@
 .Card {
   width: 60%;
   margin: auto;
+  background-color: white;
+  color: black;
+  box-shadow: 0px 0px 10px grey;
+  border: 1px solid white;
+  padding: 20px 30px;
+  text-align: left;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.Card:hover{
+  box-shadow: 1px 2px 3px 10px crimson;
+}
+
+.black-mode {
+  width: 60%;
+  margin: auto;
   background-color: black;
   color: white;
-  box-shadow: 0px 2px 3px grey;
+  box-shadow: 2px 3px 0px crimson;
   border: 1px solid white;
   padding: 20px 30px;
   text-align: left;
